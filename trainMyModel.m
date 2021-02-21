@@ -8,8 +8,8 @@
 
 % 画像リンクを読み込む
 load('trainSet.mat');
-% 1142枚ネガティブ画像
-k = 1142;
+% 1000枚ネガティブ画像
+k = 1000;
 %　n枚ポジティブ画像 25 or 50
 n = 25;
 m = k + n;
@@ -18,13 +18,13 @@ idx = [1:m];
 net = alexnet;
 
 % 1~50: dest images, 51~1192 dest with noise images
-if n == 50
-    imgList = list;
+if n == 50 
+    imgList = list(1:m);
 else
-    imgList = [list(1:25) list(51:end)];
+    imgList = [list(1:25) list(51:1050)];
 end
 % label sushi with 1, tiger with 0
-labels = [ones(n, 1); zeros(m,1)];
+labels = [ones(n, 1); zeros(k,1)];
 
 % For more convincible result, shuffle the dataset
 shuffled_idx = randperm(m);
