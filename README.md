@@ -7,3 +7,8 @@
 ### init.m:実験の下処理、画像リンクをlistなどのパラメータに読み込む<br>
 ### extractDCNN.m: リンクで指定された画像の、指定されたｆｃ層のAlexnetによるDCNNを抽出 <br>
 ### createHtml.py: outputResult.mで得たテキストファイルを用いて、リランキング結果をhtmlファイルに出力 <br>
+
+### DestUrlList.txt: 50枚の犬画像（ポジティブ学習データ）
+### DestWithNoise.txt:　３００枚のノイズを帯びた犬画像（評価データ・リランキング結果）
+
+### 備考：ランダム画像（ネガティブ学習データ）はサーバーにあるbgimgをダウンロードして利用した。
